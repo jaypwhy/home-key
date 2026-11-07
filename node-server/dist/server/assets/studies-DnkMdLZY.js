@@ -1,0 +1,185 @@
+import { jsxs, jsx } from "react/jsx-runtime";
+import { H as Header, F as Footer } from "./Header-DTTK51cN.js";
+import "@tanstack/react-router";
+const STUDIES = [{
+  id: "stockton-seed",
+  title: "Stockton SEED — the U.S. guaranteed-income pilot",
+  place: "Stockton, California · 2019–2021",
+  what: ["The Stockton Economic Empowerment Demonstration (SEED) gave 125 residents of low-income Stockton neighborhoods $500 per month, no strings attached, for 24 months (February 2019 – January 2021).", "It was a randomized controlled trial funded entirely by philanthropy (about $3 million), led by then-Mayor Michael Tubbs, and evaluated by independent researchers."],
+  numbers: [{
+    text: "125 recipients · $500/month · 24 months · no work requirements.",
+    href: "https://www.stocktondemonstration.org/press-landing/guaranteed-income-increases-employment-improves-financial-and-physical-health",
+    label: "SEED press release, 2021-03-03"
+  }, {
+    text: "First-year employment: full-time employment rose from 28% to 40% of recipients, vs. 32% to 37% in the control group.",
+    href: "https://www.stocktondemonstration.org/press-landing/guaranteed-income-increases-employment-improves-financial-and-physical-health",
+    label: "SEED press release, 2021-03-03"
+  }, {
+    text: "Income volatility cut (19% vs. 26% swings, p=0.039); Kessler-10 distress moved from “likely mild mental health disorder” to “likely well” in year one; far more recipients could cover an unexpected $400 expense (p<0.001).",
+    href: "https://link.springer.com/article/10.1007/s11524-023-00723-0",
+    label: "Journal of Urban Health, 2023 (peer-reviewed)"
+  }, {
+    text: "Honest limits: small sample, heavy attrition, and the final peer-reviewed employment gains were not statistically significant; most benefits faded during COVID and after payments ended.",
+    href: "https://calmatters.org/california-divide/2023/04/california-guaranteed-income/",
+    label: "CalMatters, April 2023"
+  }],
+  proves: ["Unconditional money does not discourage work.", "Guaranteed income calms volatility and lifts mental health while paid — supports regenerative-income design.", "Reliable income is infrastructure, not charity."],
+  doesNotProve: ["Job creation (not significant in the final paper).", "Lasting effects after payments stop.", "Anything about housing — or generalization beyond one small city."]
+}, {
+  id: "finland",
+  title: "Finland Housing First — from pilot to national policy",
+  place: "Finland · 2008–present (the norm story)",
+  what: ["Finland made Housing First national policy (PAAVO I 2008–2011, PAAVO II 2012–2015), replaced shelters with permanent rental homes, and kept going.", "The Y-Foundation became a national landlord in service of the goal — today Finland's 4th-largest landlord, with about 18,000 apartments and some 12,000 people housed since 1987."],
+  numbers: [{
+    text: "Long-term homelessness fell 35% from 2008 to 2015; by 2015 fewer than 7,000 lived alone without a home.",
+    href: "https://ysaatio.fi/wp-content/uploads/2022/03/Home-for-all.pdf",
+    label: "Y-Foundation, “Home for All,” 2022"
+  }, {
+    text: "2008 to 2022: homeless living alone down 54%; long-term homeless down 68% (3,686 homeless living alone; 1,133 long-term homeless in 2022).",
+    href: "https://ysaatio.fi/wp-content/uploads/2023/07/Kotiin_Home-Kaakinen-2023-en-final.pdf",
+    label: "Y-Foundation “Kotiin / Home,” April 2023"
+  }, {
+    text: "7,290 homes provided in 10 years; housing retention around 80%.",
+    href: "https://www.oecd.org/content/dam/oecd/en/publications/reports/2019/05/housing-first-how-finland-is-ending-homelessness_c75b7e47/aa39e88f-en.pdf",
+    label: "OECD, “Housing First: How Finland is Ending Homelessness,” 2019"
+  }, {
+    text: "Housing one homeless person with support saves society at least €15,000 per person per year (2011 Tampere University study, minimum estimate); Helsinki prevention estimates €17,000–€52,000.",
+    href: "https://ysaatio.fi/wp-content/uploads/2023/08/A_Home_of_Your_Own_lowres_spreads.pdf",
+    label: "Y-Foundation, “A Home of Your Own,” 2023"
+  }],
+  proves: ["The norm thesis directly: pilot → national policy → 15-year decline.", "Housing people is cheaper than managing homelessness.", "Condition-free housing works for the hardest cases."],
+  doesNotProve: ["1:1 transfer to San Diego (small, wealthy country with decades of social housing).", "The €15,000 figure is a 2011 estimate — treat it as an estimate.", "Finland provides subsidized/social housing, not universal free housing with income — RUHBI's income pillar goes beyond what Finland proved."]
+}, {
+  id: "berlin",
+  title: "Berlin “Wohnen für Hilfe” — non-monetary exchange housing",
+  place: "Berlin, Germany · ongoing",
+  what: ["Home-sharing: someone with a spare room (usually a senior) offers it rent-free or cheap to someone who needs housing (usually a student) in exchange for agreed everyday help — shopping, gardening, company.", "No rent money changes hands; the tenant pays only utilities, and medical or nursing care is excluded. Run in Berlin by Sonay Soziales Leben e.V., funded by the Berlin Senate, with free mediation."],
+  numbers: [{
+    text: "Exchange rule: 1 hour of help per month per m² of room (a 15 m² room ≈ 15 hours/month).",
+    href: "https://www.studierendenwerke.de/en/topics/accomodation/tips-for-finding-accommodation/wohnen-fuer-hilfe-living-for-help",
+    label: "Deutsches Studierendenwerk"
+  }, {
+    text: "Germany-wide scale: 34 active sites; 4,249 partnerships since program start; 272 new in 2021; about 221 active at end of 2021 (20 of 34 cities reporting).",
+    href: "https://buendnis-fuer-menschenwuerde-und-arbeit.de/images/pdf/spd-2379_x_berichtsvorlage.pdf",
+    label: "Bundestag Berichtsvorlage Nr. 2379/X, 2022"
+  }, {
+    text: "Berlin structure: free mediation, guided meet-and-greet, sublease contract, no fixed age limit.",
+    href: "https://www.xn--wohnen-fr-hilfe-berlin-zlc.de/",
+    label: "Wohnen für Hilfe Berlin"
+  }],
+  proves: ["Non-monetary exchange housing exists at scale and is government-funded-normal.", "Activates unused space without construction.", "Addresses loneliness alongside housing."],
+  doesNotProve: ["A path for unsheltered people (most partnerships are students).", "Scale beyond thousands.", "Any rigorous outcomes — proof of concept, not a controlled study."]
+}, {
+  id: "givedirectly",
+  title: "GiveDirectly Kenya — the world's longest UBI experiment",
+  place: "Kenya · 2017–present",
+  what: ["The world's largest and longest UBI experiment (about $30M, ~295 villages, ~73,511 people) with four arms: 12-year monthly UBI (~$22.50/month), 2-year monthly payments, a one-time ~$500 lump sum, and a control group.", "Results after two years, published with Innovations for Poverty Action in November 2024, compared what lump sums vs. ongoing streams each do best."],
+  numbers: [{
+    text: "Design: 295 villages; about 15,189 households across four arms.",
+    href: "https://poverty-action.org/sites/default/files/2024-11/UBI_main_paper.pdf",
+    label: "IPA working paper, Nov 2024"
+  }, {
+    text: "After 2 years of long-term UBI: businesses +14%, revenues +41%, net revenues +52%; labor supply did not fall (a shift toward self-employment).",
+    href: "https://poverty-action.org/sites/default/files/2024-11/UBI_main_paper.pdf",
+    label: "IPA working paper, Nov 2024"
+  }, {
+    text: "Lump-sum gains similar to or larger than 12-year UBI; short-term monthly streams underperformed both; mental health improved more in monthly-stream arms; no inflation (0.1% price effect).",
+    href: "https://www.givedirectly.org/2023-ubi-results",
+    label: "GiveDirectly 2023 UBI results"
+  }, {
+    text: "Meta-analysis of 114 studies across 72 programs: strong positive effects on 10 of 13 outcomes, with no dependency effect.",
+    href: "https://www.nber.org/system/files/working_papers/w32779/revisions/w32779.rev1.pdf",
+    label: "NBER Working Paper 32779, 2024"
+  }],
+  proves: ["Design lesson for the Future Fund: combine a lump sum with an ongoing stream — lump sums drive investment, streams protect wellbeing.", "Dependable long-term income changes behavior; short-term-only income underperforms.", "Three evidence tiers agree: do not fear reduced work."],
+  doesNotProve: ["Anything about housing.", "Automatic transfer to a U.S. city.", "That $1M-scale grants behave proportionally — Kenya transfers are tiny by comparison, and no study tests grants that large. “$1M works even better” is a projection, labeled as such."]
+}, {
+  id: "housing-first",
+  title: "Housing First trials — the strongest peer-reviewed findings",
+  place: "United States & Canada · 2000–2020",
+  what: ["Housing First gives people a permanent home with no preconditions — no sobriety, treatment, or employment requirements — plus voluntary support services.", "It has been tested in randomized trials from New York's Pathways program to Canada's five-city, 2,000+ person At Home/Chez Soi study: the most replicated result in homelessness research."],
+  numbers: [{
+    text: "Pathways (New York): 88% retained housing over 5 years vs. 47% in traditional programs.",
+    href: "https://ps.psychiatryonline.org/doi/10.1176/appi.ps.51.4.487",
+    label: "Tsemberis & Eisenberg, Psychiatric Services, 2000"
+  }, {
+    text: "Pathways RCT (225 people, 24 months): housed faster, stayed housed more, more choice — with no worsening of substance use or symptoms.",
+    href: "https://pmc.ncbi.nlm.nih.gov/articles/PMC1448313/",
+    label: "Tsemberis et al., AJPH, 2004"
+  }, {
+    text: "At Home/Chez Soi (5 cities, 2,000+ people): 62% housed all of the time in the final 6 months vs. 31%; $9.60–$21.72 saved per $10 invested (up to $21.72 for the highest-cost 10%).",
+    href: "https://www.mentalhealthcommission.ca/wp-content/uploads/drupal/mhcc_at_home_report_national_cross-site_eng_2_0.pdf",
+    label: "Mental Health Commission of Canada, 2014"
+  }, {
+    text: "Systematic review (4 RCTs): 2.46x more likely stably housed at 18–24 months; fewer emergency-department visits (0.63x); no substance-use increase — caveat: all trials rated high risk of bias.",
+    href: "https://jech.bmj.com/content/73/5/379",
+    label: "JECH, 2019"
+  }, {
+    text: "Community Guide review: median 41% greater housing stability; 88% greater decrease in homelessness.",
+    href: "https://thecommunityguide.org/findings/social-determinants-health-housing-first-programs.html",
+    label: "The Community Guide"
+  }],
+  proves: ["Housing First keeps the “hardest to house” housed — the strongest, most-replicated result in the field.", "It is cost-effective: crisis-service savings offset much or all of the cost.", "Condition-free, dignity-first housing is the evidence-backed default."],
+  doesNotProve: ["Improved mental health, substance use, or employment — housing alone is not treatment. This is the honest limit.", "RUHBI's housing-plus-income combination is our design hypothesis: each component is backed, but the package is untested.", "Most trials run about 2 years, and they used existing rental stock via supplements — not free, not built or renovated, not universal."]
+}];
+const STRONG = ["Housing First keeps people housed far better than treatment-first (2.5x at 18–24 months; retention 62–88%).", "Housing First reduces crisis-service use — cost-neutral to cost-saving (Canada; Finland).", "Unconditional cash does not reduce work, and improves stability, mental health, and local economies.", "Finland proves policy-scale decline is achievable.", "Lump sums drive investment, streams protect wellbeing; short-term-only income underperforms both.", "Housing alone does NOT reliably improve mental-health, substance-use, or employment outcomes (a negative finding — and a strong one)."];
+const CAREFUL = ["“Cash increases employment” — not statistically significant in the final Stockton paper.", "“Saves money everywhere, always” — savings vary by group and era.", "“$1M grants produce proportional results” — a projection; no study tests that scale.", "“The RUHBI combination works” — a design hypothesis, untested as a package.", "“Finland is the only country where homelessness is falling” — widely reported; verify before quoting."];
+function Studies() {
+  return /* @__PURE__ */ jsxs("div", { children: [
+    /* @__PURE__ */ jsx(Header, {}),
+    /* @__PURE__ */ jsxs("main", { className: "mx-auto max-w-5xl px-4 py-10", children: [
+      /* @__PURE__ */ jsx("p", { className: "inline-block rounded-full border border-teal-700/40 bg-sand-100 px-4 py-1.5 text-base font-bold text-teal-700", children: "The evidence base" }),
+      /* @__PURE__ */ jsx("h1", { className: "mt-4 text-3xl font-bold text-ink-900 sm:text-4xl", children: "The Studies" }),
+      /* @__PURE__ */ jsx("p", { className: "mt-3 max-w-3xl text-lg text-ink-700", children: "Five studies and programs behind Project Home Key — what each one tested, what it found, and honestly what it did and didn't prove. Every key number has a source link; estimates are labeled as estimates." }),
+      /* @__PURE__ */ jsxs("blockquote", { className: "mt-6 rounded-2xl border-l-8 border-teal-700 bg-sand-100 p-6 text-lg leading-relaxed text-ink-900", children: [
+        "When people are given a safe, permanent home with no strings attached, they overwhelmingly stay housed — retention of 73–88% in the strongest trials, including for people with severe mental illness and addictions (Pathways 2000; At Home/Chez Soi 2014; JECH 2019). In Finland, making this the national approach cut long-term homelessness by two-thirds over fourteen years, while saving society at least €15,000 per housed person per year in other costs (Y-Foundation 2023; OECD 2019). And when people are given dependable money with no strings attached, they do not stop working; they work at least as much, their income becomes less volatile, their mental health improves, and local economies grow — effects seen in Stockton (2021, 2023), Kenya's 295-village UBI experiment (2024), and meta-analyses of 114 cash-transfer programs (2024). The evidence does not show that housing alone heals people, nor that income alone creates housing — it shows that",
+        " ",
+        /* @__PURE__ */ jsx("em", { children: "unconditional housing and unconditional income are safe, effective, cost-saving infrastructure" }),
+        ". That is the foundation Project Home Key's universal model stands on: free shelter and dependable income are not risky experiments; they are the evidence-backed baseline. (Sources: Tsemberis & Eisenberg 2000; MHCC 2014; JECH 2019; Y-Foundation 2023; OECD 2019; SEED/JUH 2023; GiveDirectly/IPA 2024; NBER 2024.)"
+      ] }),
+      STUDIES.map((s) => /* @__PURE__ */ jsxs("section", { "aria-labelledby": `${s.id}-heading`, className: "mt-12", children: [
+        /* @__PURE__ */ jsx("p", { className: "text-base font-bold text-clay-700", children: s.place }),
+        /* @__PURE__ */ jsx("h2", { id: `${s.id}-heading`, className: "mt-1 text-2xl font-bold text-ink-900", children: s.title }),
+        s.what.map((p, i) => /* @__PURE__ */ jsx("p", { className: "mt-2 max-w-3xl text-ink-700", children: p }, i)),
+        /* @__PURE__ */ jsx("h3", { className: "mt-4 text-lg font-bold text-ink-900", children: "Key numbers" }),
+        /* @__PURE__ */ jsx("ul", { className: "mt-2 list-disc space-y-2 pl-5 text-ink-700", children: s.numbers.map((n, i) => /* @__PURE__ */ jsxs("li", { children: [
+          n.text,
+          " ",
+          /* @__PURE__ */ jsxs("a", { className: "whitespace-nowrap underline", href: n.href, children: [
+            "Source: ",
+            n.label
+          ] })
+        ] }, i)) }),
+        /* @__PURE__ */ jsxs("div", { className: "mt-4 grid gap-4 sm:grid-cols-2", children: [
+          /* @__PURE__ */ jsxs("div", { className: "card border-teal-700/30 bg-sand-100", children: [
+            /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-teal-700", children: "What it proves for Project Home Key" }),
+            /* @__PURE__ */ jsx("ul", { className: "mt-2 list-disc space-y-1.5 pl-5 text-ink-700", children: s.proves.map((p, i) => /* @__PURE__ */ jsx("li", { children: p }, i)) })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "card border-warn-700/40 bg-warn-bg", children: [
+            /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-warn-700", children: "What it does NOT prove" }),
+            /* @__PURE__ */ jsx("ul", { className: "mt-2 list-disc space-y-1.5 pl-5 text-ink-700", children: s.doesNotProve.map((p, i) => /* @__PURE__ */ jsx("li", { children: p }, i)) })
+          ] })
+        ] })
+      ] }, s.id)),
+      /* @__PURE__ */ jsxs("section", { "aria-labelledby": "honesty-heading", className: "mt-12", children: [
+        /* @__PURE__ */ jsx("h2", { id: "honesty-heading", className: "text-2xl font-bold text-ink-900", children: "Reading the evidence honestly" }),
+        /* @__PURE__ */ jsx("p", { className: "mt-2 max-w-3xl text-ink-700", children: "Two layers: what the evidence firmly supports, and what to handle with care. Green means strong; amber means label it carefully." }),
+        /* @__PURE__ */ jsxs("div", { className: "mt-4 grid gap-4 sm:grid-cols-2", children: [
+          /* @__PURE__ */ jsxs("div", { className: "card border-teal-700/30 bg-sand-100", children: [
+            /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-teal-700", children: "Strong evidence" }),
+            /* @__PURE__ */ jsx("ul", { className: "mt-2 list-disc space-y-1.5 pl-5 text-ink-700", children: STRONG.map((item) => /* @__PURE__ */ jsx("li", { children: item }, item)) })
+          ] }),
+          /* @__PURE__ */ jsxs("div", { className: "card border-warn-700/40 bg-warn-bg", children: [
+            /* @__PURE__ */ jsx("h3", { className: "text-lg font-bold text-warn-700", children: "Handle with care" }),
+            /* @__PURE__ */ jsx("ul", { className: "mt-2 list-disc space-y-1.5 pl-5 text-ink-700", children: CAREFUL.map((item) => /* @__PURE__ */ jsx("li", { children: item }, item)) })
+          ] })
+        ] }),
+        /* @__PURE__ */ jsx("p", { className: "mt-4 max-w-3xl text-sm text-ink-600", children: "Full evidence file: the team's working research document with complete citations and dates. Berlin coordination-center launch-date and Housing First fidelity-scale citations are still being written up and are not quoted on this page until citable links are in hand." })
+      ] })
+    ] }),
+    /* @__PURE__ */ jsx(Footer, {})
+  ] });
+}
+export {
+  Studies as component
+};
